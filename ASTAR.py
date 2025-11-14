@@ -78,18 +78,17 @@ def a_star(graph: Dict[str, Dict[str, float]],
 def main():
 	# Directed graph transcription from the diagram (edges -> weight)
 	graph = {
-		'S': {'A': 3, 'B': 1, 'C': 5},
-		'A': {'G1': 10, 'E': 7},
-		'E': {'G1': 2},
-		'B': {'C': 2, 'D': 4, 'F': 2},
-		'D': {'S': 6, 'F': 1, 'G2': 5},
-		'F': {'G3': 0},
-		'C': {'G3': 11},
-		'G1': {},
-		'G2': {},
-		'G3': {},
-	}
-
+     'S': {'A': 3, 'B': 1, 'C': 5},
+     'A': {'E': 7, 'G1': 10},
+     'B': {'C': 2, 'F': 2},
+     'C': {'G3': 11},
+     'D': {'B': 4, 'S': 6, 'G2': 5},
+     'E': {'G1': 2},
+     'F': {'D': 1},
+     'G1': {},
+     'G2': {},
+     'G3': {'F': 0}
+ }
 	# Heuristic values (taken from numbers inside node circles in the image)
 	heuristic = {
 		'S': 8,
